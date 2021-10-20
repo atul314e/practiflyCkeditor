@@ -1,1 +1,0 @@
-!function(i){const t=i.si=i.si||{};t.dictionary=Object.assign(t.dictionary||{},{Bold:"තදකුරු","Bulleted List":"බුලටිත ලැයිස්තුව",Italic:"ඇලකුරු","Numbered List":"අංකිත ලැයිස්තුව"}),t.getPluralForm=function(i){return 1!=i}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

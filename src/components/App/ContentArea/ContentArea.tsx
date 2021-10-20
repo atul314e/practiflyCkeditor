@@ -3,11 +3,10 @@
  * @description Content Area Component, contains route mapping
  */
 
-import React, { PureComponent } from 'react';
+import React, { PureComponent} from 'react';
 import { Layout } from 'antd';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ErrorBoundary from '../ErrorBoundary';
-const ClassicEditor = require('../../../../build/ckeditor.js');
+import Ckeditor from '../ckeditor';
 /**
  * ContentArea comonent
  */
@@ -26,29 +25,17 @@ class ContentArea extends PureComponent<App.IContentAreaProps> {
 	 *
 	 * @returns {JSX.Element} render
 	 */
+  html=''
+  ckeditorHtml = (data:any):any => {
+    this.html=data;
+    console.log(this.html);
+  }
 	render(): JSX.Element {
 		return (
 			<Layout.Content>
 				<ErrorBoundary>
 					<h2>Using CKEditor 5 build in React</h2>
-					<CKEditor
-						editor={ClassicEditor}
-						data='<p>Hello from CKEditor 5!</p>'
-						onReady={(editor: any) => {
-							// You can store the "editor" and use when it is needed.
-							console.log('Editor is ready to use!', editor);
-						}}
-						onChange={(event: any, editor: any) => {
-							const data = editor.getData();
-							console.log({ event, editor, data });
-						}}
-						onBlur={(__: any, editor: any) => {
-							console.log('Blur.', editor);
-						}}
-						onFocus={(__: any, editor: any) => {
-							console.log('Focus.', editor);
-						}}
-					/>
+          <Ckeditor/>
 				</ErrorBoundary>
 			</Layout.Content>
 		);
