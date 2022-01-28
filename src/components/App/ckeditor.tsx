@@ -5,7 +5,7 @@ const ClassicEditor = require('../../build/ckeditor.js');
 const Ckeditor: React.FC = ()=>{
   const [html, setHtml] = useState('');
   return (
-		<>
+		<div className='ckeditor-container'>
 			<CKEditor
 				editor={ClassicEditor}
 				data='<p>Hello from CKEditor 5!</p>'
@@ -26,7 +26,7 @@ const Ckeditor: React.FC = ()=>{
 				}}
 			/>
 			<div>{html}</div>
-		</>
+		</div>
   );
 }
 

@@ -39,6 +39,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 
+import InsertImage from '../myplugins/testplugin';
 class Editor extends ClassicEditor {}
 
 // Plugins to include in the build.
@@ -51,15 +52,11 @@ Editor.builtinPlugins = [
 	CloudServices,
 	Essentials,
 	Heading,
-	Image,
-	ImageCaption,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
 	Indent,
 	Italic,
 	Link,
 	List,
+  Image,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
@@ -77,7 +74,46 @@ Editor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	TodoList,
-	Underline
+	Underline,
+	InsertImage,
 ];
+
+Editor.defaultConfig = {
+	toolbar: {
+		items: [
+			'heading',
+			'|',
+			'bold',
+			'italic',
+			'link',
+			'bulletedList',
+			'numberedList',
+			'|',
+			'outdent',
+			'indent',
+			'|',
+			'blockQuote',
+			'insertTable',
+			'mediaEmbed',
+			'undo',
+			'redo',
+			'|',
+			'underline',
+			'superscript',
+			'subscript',
+			'strikethrough',
+			'specialCharacters',
+			'todoList',
+			'|',
+			'CKFinder',
+			'|',
+			'insertImage',
+		],
+	},
+	language: 'en',
+	table: {
+		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
+	},
+};
 
 export default Editor;

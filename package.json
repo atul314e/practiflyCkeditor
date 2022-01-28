@@ -104,6 +104,7 @@
 		"@ant-design/icons": "^4.6.2",
 		"@ckeditor/ckeditor5-react": "^3.0.2",
 		"@datapunt/matomo-tracker-react": "^0.4.0",
+		"@types/ckeditor": "^4.9.10",
 		"ajv": "^8.6.2",
 		"antd": "^4.16.9",
 		"axios": "^0.21.1",
